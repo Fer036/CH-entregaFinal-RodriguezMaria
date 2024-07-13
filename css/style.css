@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000 url(/assets/bg/background.jpg) no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    position: relative;
+
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button {
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* Index */
+.headerIndex {
+    width: 100%;
+    text-align: center;
+
+    position: fixed;
+
+    color: white;
+    z-index: 1;
+}
+
+.headerIndex img {
+    width: 60rem;
+    margin-top: 5rem;
+    opacity: 70%;
+}
+
+/* Index Parallax background */
+.elemento,
+.elemento img {
+    position: absolute;
+}
+
+.elemento img {
+    display: inline-block;
+    opacity: 50%;
+}
+
+.elemento2,
+.elemento3,
+.elemento4 {
+    left: 10% !important;
+}
+
+
+.elemento5 {
+    left: 20% !important;
+}
+
+.elemento6 {
+    top: 10% !important;
+    left: 50% !important;
+}
+
+.elemento7 {
+    top: 15% !important;
+}
+
+/* Index - reddes sociales */
+.redes {
+    width: 20%;
+    height: 3rem;
+
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* Botones */
+button {
+    cursor: pointer;
+}
+
+.botonera {
+    padding: .1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*------------*/
+a,
+#capamerica,
+#blackwid,
+#ironman,
+#scarlet,
+#spiderman {
+    text-decoration: none;
+
+    background: rgb(128, 126, 126);
+    background: linear-gradient(309deg, rgba(128, 126, 126, 1) 0%, rgba(0, 0, 0, 1) 66%);
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: inset 1px 1px 0px #7d7c7e, inset -1px -1px 0px #1c1c1c;
+}
+
+i {
+    color: #a6a6a6;
+    font-size: .8rem;
+}
+
+a,
+#ingresar,
+.btnForm,
+#empezarJuego,
+#cerrarSesion,
+#capamerica,
+#blackwid,
+#ironman,
+#scarlet,
+#spiderman {
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid #090909;
+}
+
+.btnForm {
+    margin: 1rem auto;
+}
+
+#empezarJuego,
+#cerrarSesion {
+    margin: 1rem;
+}
+
+.btnForm,
+#empezarJuego,
+#cerrarSesion {
+    padding: .3rem;
+
+    height: 80px;
+    width: 80px;
+
+    font-size: .7rem;
+}
+
+#ingresar {
+    width: 100px;
+    height: 100px;
+
+    font-size: 1.3rem;
+}
+
+#ingresar,
+.btnForm,
+#empezarJuego,
+#cerrarSesion {
+    font-weight: bold;
+    color: white;
+}
+
+#ingresar,
+#cerrarSesion {
+    box-shadow: inset 1px 1px 0px #b14a4a, inset -1px -1px 0px #1c1c1c;
+    background: rgb(61, 61, 61);
+    background: linear-gradient(309deg, rgb(224, 108, 108) 0%, rgb(126, 3, 3) 50%);
+}
+
+.btnForm,
+#empezarJuego {
+    box-shadow: inset -1px -1px 0px #092638, inset -1px -1px 0px #2f4c5e;
+    background: #2f4c5e;
+    background: linear-gradient(309deg, #596a75 0%, #052031 70%);
+}
+
+
+/*------------*/
+a::before,
+#ingresar::before,
+.btnForm::before,
+#empezarJuego::before,
+#cerrarSesion::before,
+#capamerica::before,
+#blackwid::before,
+#ironman::before,
+#scarlet::before,
+#spiderman::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+
+    z-index: -1;
+}
+
+a::before,
+#capamerica::before,
+#blackwid::before,
+#ironman::before,
+#scarlet::before,
+#spiderman::before {
+    width: 60px;
+    height: 60px;
+
+    background: linear-gradient(145deg, #262626, #606060);
+}
+
+#ingresar::before {
+    width: 105px;
+    height: 105px;
+
+    background: linear-gradient(145deg, #3f2424, #302323);
+}
+
+.btnForm::before,
+#empezarJuego::before,
+#cerrarSesion::before {
+    width: 83px;
+    height: 83px;
+
+    background: linear-gradient(309deg, #2c373d 0%, #b5c4ce 70%);
+}
+
+#capamerica, #blackwid, #ironman, #scarlet, #spiderman {
+    margin: auto;
+    color: #2f4c5e;
+
+    font-weight: 900;
+}
+
+/* Efecto al hacer click */
+.botonClick {
+    background: linear-gradient(-185deg, #131313, #444245);
+    box-shadow: inset -1px -1px 0px #5e5e5e, inset 1px 1px 0px #1c1c1c;
+}
+
+.iconoClick {
+    color: #fff;
+    text-shadow: 0px 0px 5px #008ece;
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* Títulos */
+.titulo {
+    margin-top: 15rem;
+    font-size: 3rem;
+}
+
+h1,
+#mensaje,
+#score,
+#mensajePC {
+    color: white;
+}
+
+.tituloTabla {
+    margin-top: 5rem;
+}
+
+.tituloJuego {
+    font-size: 5rem;
+    margin-top: 2rem;
+}
+
+h3 {
+    margin: .6rem;
+    color: #444245;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #2f4c5e;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* Containers */
+.mainLogin,
+.mainTabla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    width: 20rem;
+    height: 18rem;
+
+    margin: .5rem;
+    padding: 1rem;
+}
+
+.containerJuego {
+    width: 80%;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    margin: .5rem auto;
+}
+
+table,
+.container {
+    background: linear-gradient(155deg, white, rgba(148, 144, 144, 0.226));
+    backdrop-filter: blur(8px);
+}
+
+table {
+    border-collapse: collapse;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: start;
+}
+
+#score {
+    width: 30rem;
+    margin-bottom: 1rem;
+
+    padding: 1rem;
+
+    font-size: 1.3rem;
+
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+#ronda {
+    margin: 1rem;
+    font-size: 1rem;
+    color: rgb(173, 166, 197);
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* Elementos */
+input {
+    border: 1px solid white;
+    border-radius: 20px;
+    
+    width: 13rem;
+    height: 1.4rem;
+    padding: .6rem;
+    
+    color: #008ece;
+}
+
+label {
+    margin: .5rem;
+    color: #2f4c5e;
+    font-weight: 500;
+}
+
+th,
+td {
+    padding: 2rem;
+}
+
+#mensaje {
+    font-size: 1rem;
+    margin-top: 3rem;
+    padding: .4rem;
+}
+
+p {
+    margin: .4rem;
+    color: white;
+    font-weight: bold;
+}
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* Cards personajes */
+.card-img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.25rem;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 8px rgba(248, 248, 248, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); 
+}
+
+.card-img-top {
+    transition: filter 0.3s ease;
+}
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7); 
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    filter: blur(8px); 
+}
+
+.card:hover .card-overlay {
+    opacity: 1; 
+}
+
+.card-body {
+    background-color: #052031;
+    color: white;
+}
+
+.card-footer {
+    background: #052031;
+    
+    box-shadow: 0px -4px 5px -2px rgba(255, 255, 255, 0.77);
+    -webkit-box-shadow: 0px -4px 5px -2px rgba(255, 255, 255, 0.77);
+    -moz-box-shadow: 0px -4px 5px -2px rgba(255, 255, 255, 0.77);
+}
+
+
+/* --------------------------------------------------------------------------------------------------------- */
+/* Loading */
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8); 
+    display: none; 
+    transition: opacity 0.3s ease; 
+}

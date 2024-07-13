@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Descripcion -->
+    <meta name="description" content="proyecto web app game, desarrollado por Maria Rodriguez">
+    <!-- Palabras claves -->
+    <meta name="keywords"
+        content="game, web, desarrollo, pages, fronend, deveolper, marvel, app, design, combat, player, css, javascript, react, ux, app">
+    <!-- Open Graph -->
+    <meta poperty="og:type" content="web-site">
+    <meta poperty="og:title" content="Rodriguez Maria - FrontEnd developer - WebDesign">
+    <meta poperty="og:url" content="">
+    <meta poperty="og:image" content="">
+    <meta poperty="og:description" content="diseño y desarrollo web">
+
+    <!-- css -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/style.css'>
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Título -->
+    <title>GAME ON</title>
+    <!-- Icono pestaña -->
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="imagen/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">MARVEL COMBAT</h1>
+        <h4>By: María Rodríguez</h4>
+    </header>
+
+    <main class="mainLogin">
+        <div class="container" id="container">
+            <h3>Login</h3>
+
+            <form id="loginForm">
+                <label for="usuario"> Usuario:</i></label>
+                <span>
+                    <i class="bi bi-person-fill"></i>
+                    <input type="text" id="usuario" name="usuario" autocomplete="usuario" placeholder="User" required>
+                </span>
+                <label for="contrasena">Contraseña: </label>
+                <span>
+                    <i class="bi bi-key-fill"></i>
+                    <input type="password" id="contrasena" name="contrasena" autocomplete="current-password" placeholder="****" required>
+                </span>
+                <button class="btnForm" type="submit">Ingresar</button>
+            </form>
+            
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../js/player.js"></script>
+    <script src="../js/login.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>

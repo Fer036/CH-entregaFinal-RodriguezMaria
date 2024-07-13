@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- Descripcion -->
+    <meta name="description" content="proyecto web app game, desarrollado por Maria Rodriguez">
+    <!-- Palabras claves -->
+    <meta name="keywords"
+        content="game, web, desarrollo, pages, fronend, deveolper, marvel, app, design, combat, player, css, javascript, react, ux, app">
+    <!-- Open Graph -->
+    <meta poperty="og:type" content="web-site">
+    <meta poperty="og:title" content="Rodriguez Maria - FrontEnd developer - WebDesign">
+    <meta poperty="og:url" content="">
+    <meta poperty="og:image" content="">
+    <meta poperty="og:description" content="diseño y desarrollo web">
+
+    <!-- css -->
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/style.css'>
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Título -->
+    <title>GAME ON</title>
+    <!-- Icono pestaña -->
+    <link rel="shortcut icon" href="/assets/img/logo.png" type="imagen/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1 class="tituloTabla">TABLA DE POSICIONES</h1>
+    </header>
+    <main class="mainTabla">
+        <table id="tablaPosiciones">
+            <thead>
+                <tr>
+                    <th>Usuario:</th>
+                    <th>Puntaje:</th>
+                    <th>Última conexión:</th>
+                </tr>
+            </thead>
+
+            <tbody id="tablaPosicionesBody">
+                <!-- Tabla de posiciones -->
+            </tbody>
+        </table>
+        <div class="botonera">
+            <button id="empezarJuego">¡Jugar!</button>
+            <button id="cerrarSesion">Cerrar Sesión</button>
+        </div>
+    </main>
+    <!-- Scripts -->
+    <script src="../js/player.js"></script>
+    <script src="../js/tabla.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
