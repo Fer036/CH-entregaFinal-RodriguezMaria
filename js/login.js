@@ -1,6 +1,11 @@
+/* -------------------------------------------------------------------------------------- */
+/* -------------------------------------> LOGIN <---------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
 // Traigo elementos del HTML.
 const loginForm = document.getElementById('loginForm');
 
+// Función para mostrar la tostadita
 let mostrarToast = (mensaje, fondo) => {
     Toastify({
         text: mensaje,
@@ -28,7 +33,7 @@ function validarInput(input) {
     input.reportValidity();
 };
 
-// Hago la validación en tiempo real para que sea más dinámico.
+// Hago la validación en tiempo real para que sea más rápido.
 const usuarioInput = document.getElementById('usuario');
 const contrasenaInput = document.getElementById('contrasena');
 

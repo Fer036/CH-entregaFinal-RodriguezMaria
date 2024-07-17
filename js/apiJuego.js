@@ -1,9 +1,15 @@
+/* -------------------------------------------------------------------------------------- */
+/* -----------------------------------> API MARVEL <------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+
+/* Personajes del combate */
 const IMG_CAPAMERICA = document.getElementById('img_capamerica');
 const IMG_BLACKWID = document.getElementById('img_blackwid');
 const IMG_IRONMAN = document.getElementById('img_ironman');
 const IMG_SCARLET = document.getElementById('img_scarlet');
 const IMG_SPIDERMAN = document.getElementById('img_spiderman');
 
+/* Utilización de la api */
 function fetchMarvelData(characterId, imgElement) {
     const PUBLICKEY = '691bf7b96e6059a7b7906ca697077c31';
     const PRIVATEKEY = '10740f0bf79e630b022ff99118d486a981eb1deb';
@@ -29,7 +35,7 @@ function fetchMarvelData(characterId, imgElement) {
         .catch(error => console.error('Error fetching data', error));
 };
 
-// Llamar para cada personaje:
+/* Llamar para cada personaje */
 fetchMarvelData('1009220'); // Capitán América
 fetchMarvelData('1009189'); // Black Widow
 fetchMarvelData('1009368'); // Ironman
