@@ -3,6 +3,10 @@
 /* -------------------------------------------------------------------------------------- */
 
 const BOTONES = document.querySelectorAll('#opciones button');
+const progress = document.getElementById('progress');
+const contenedorCarga = document.getElementById('contenedorCarga');
+const content = document.getElementById('content');
+
 class Juego {
     constructor() {
         this.jugadorScore = 0;
@@ -12,7 +16,34 @@ class Juego {
         this.scoreDisplay = document.getElementById('score');
         this.roundDisplay = document.getElementById('ronda');
         this.initButtons();
+        this.initProgressBar();
     };
+
+    // Barra de carga de la página
+    initProgressBar() {
+        let circle = new ProgressBar.Circle(progress, {
+            color: '#002E5A',
+            trailColor: '#27537E',
+            trailWidth: 2,
+            duration: 2000,
+            easing: 'bounce',
+            strokeWidth: 6,
+            from: { color: '#002E5A', a: 0 },
+            to: { color: '#6E91B3', a: 3 },
+            step: function (state, circle) {
+                circle.path.setAttribute('stroke', state.color);
+            }
+        });
+
+        circle.animate(1, () => {
+            setTimeout(() => {
+                contenedorCarga.style.display = 'none';
+                content.classList.remove('hidden');
+                contenedorCarga.classList.remove('contenedorCarga');
+            }, 300);
+        });
+    };
+
     // Botones de las opciones.
     initButtons() {
         BOTONES.forEach(button => {
@@ -151,22 +182,22 @@ class Juego {
                 puntajePC: this.pcScore,
                 fecha: new Date().toLocaleString()
             };
-            
+
             // Agregar partida a las partidas jugadas del usuario
             usuarioActual.partidas.push(partida);
-            
+
             // Actualizar puntaje total del usuario
             usuarioActual.score += this.jugadorScore;
-            
+
             // Guardar usuario actualizado en localStorage
             localStorage.setItem('usuarioActual', JSON.stringify(usuarioActual));
-            
+
             // Actualizar lista de usuarios en localStorage
             let usuarios = JSON.parse(localStorage.getItem('usuarios36886')) || [];
-            
+
             // Modificar solo el usuario específico en el array
             usuarios = usuarios.map(user => user.usuario === usuarioActual.usuario ? usuarioActual : user);
-            
+
             // Guardar el array de usuarios actualizado en localStorage
             localStorage.setItem('usuarios36886', JSON.stringify(usuarios));
 
@@ -200,7 +231,7 @@ class Juego {
                     }, 1000);
                 }
             });
-        }, 1000); // Esperar 1 segundo antes de mostrar el SweetAlert
+        }, 1000);
     };
 };
 const JUEGO = new Juego();

@@ -30,6 +30,7 @@ Bootstrap: https://getbootstrap.com/
 Toastify: https://apvarun.github.io/toastify-js/
 SweetAlert: https://sweetalert2.github.io/
 Parallax.js: https://matthew.wagerfield.com/parallax/
+Progressbar.js: https://kimmobrunfeldt.github.io/progressbar.js/
 ```
 
 ## API utilizada: 
